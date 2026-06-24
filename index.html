@@ -4,81 +4,96 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dome Research</title>
-    <meta name="description" content="Dome Research is an investment, incubation, and research firm.">
-    <link rel="preconnect" href="https://images.unsplash.com">
+    <meta name="description" content="Dome Research Capital — research-led investing across private and public markets.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Dome Research home">Dome Research</a>
-      <nav aria-label="Main navigation">
-        <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <div class="layout">
+      <!-- Left sidebar -->
+      <aside class="sidebar">
+        <a class="brand" href="#top">
+          <span class="brand-mark">Dome Research</span>
+          <span class="brand-sub">Capital</span>
+        </a>
 
-    <main>
-      <section class="hero">
-        <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Investments | Incubations | Research</p>
-          <h1>Dome Research</h1>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a href="#investments">Investments</a>
+          <a href="#funds">Funds</a>
+          <a href="#about">About Me</a>
+        </nav>
+
+        <div class="sidebar-foot">
+          <a href="mailto:hello@domeresearch.xyz">hello@domeresearch.xyz</a>
+          <span>domeresearch.xyz</span>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="content" id="top">
+        <section class="hero">
+          <p class="eyebrow">Investments · Credit · Research</p>
+          <h1>Research-led capital<br>across private &amp; public markets.</h1>
           <p class="lede">
-            We invest in durable ideas, incubate new companies, and publish research on markets,
-            technology, and emerging business models.
+            Dome Research Capital studies markets, allocates capital, and structures
+            financing around durable, well-understood risk.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">Get in touch</a>
-            <a class="button secondary" href="#approach">Our approach</a>
+            <a class="button primary" href="#funds">Explore funds</a>
+            <a class="button ghost" href="mailto:hello@domeresearch.xyz">Get in touch</a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="intro section">
-        <div class="section-label">Firm</div>
-        <div class="intro-copy">
-          <h2>Research-led capital and company formation.</h2>
-          <p>
-            Dome Research combines independent analysis with hands-on operating support. The firm
-            studies markets, allocates capital, and helps build early-stage ideas from thesis to
-            launch.
+        <section id="investments" class="block">
+          <span class="kicker">Investments</span>
+          <h2>Thesis-driven positions.</h2>
+          <p class="block-lede">
+            We take concentrated positions where independent research gives us an edge —
+            business quality, market structure, and long-term compounding.
           </p>
-        </div>
-      </section>
+        </section>
 
-      <section id="approach" class="section split">
-        <div>
-          <span class="section-label">Approach</span>
-          <h2>How we think.</h2>
-        </div>
-        <div class="strategy-list">
-          <article>
-            <h3>Public and Private Markets</h3>
-            <p>Thesis-driven investments informed by business quality, market structure, and long-term compounding potential.</p>
-          </article>
-          <article>
-            <h3>Venture Formation</h3>
-            <p>Early research, customer discovery, product definition, and operator support for new companies.</p>
-          </article>
-          <article>
-            <h3>Applied Research</h3>
-            <p>Published notes and internal memos on technology shifts, consumer behavior, infrastructure, and capital allocation.</p>
-          </article>
-        </div>
-      </section>
+        <section id="funds" class="block">
+          <span class="kicker">Funds</span>
+          <h2>Strategies.</h2>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Primary Equities</h3>
+              <p>Thesis-driven equity positions in private and public companies.</p>
+            </article>
+            <article class="card">
+              <h3>Credit</h3>
+              <p>Structured private-market financing secured by quality collateral.</p>
+            </article>
+            <article class="card">
+              <h3>Opportunities</h3>
+              <p>Special situations and dislocations across the capital structure.</p>
+            </article>
+            <article class="card featured">
+              <h3>PECO</h3>
+              <p>Bridge financing for private-market equity, secured by the shares it funds.</p>
+            </article>
+          </div>
+        </section>
 
-      <section id="contact" class="section contact">
-        <div>
-          <span class="section-label">Contact</span>
-          <h2>For research, investment, or incubation conversations.</h2>
-        </div>
-        <a class="button primary" href="mailto:hello@domeresearch.xyz">hello@domeresearch.xyz</a>
-      </section>
-    </main>
+        <section id="about" class="block">
+          <span class="kicker">About Me</span>
+          <h2>The firm.</h2>
+          <p class="block-lede">
+            Dome Research combines independent analysis with hands-on operating support —
+            studying markets, allocating capital, and helping build early-stage ideas from
+            thesis to launch.
+          </p>
+          <p class="block-note">— Replace with your bio.</p>
+        </section>
 
-    <footer>
-      <span>Dome Research</span>
-      <span>domeresearch.xyz</span>
-    </footer>
+        <footer class="content-foot">
+          <span>Dome Research Capital</span>
+          <a href="mailto:hello@domeresearch.xyz">hello@domeresearch.xyz</a>
+        </footer>
+      </main>
+    </div>
   </body>
 </html>

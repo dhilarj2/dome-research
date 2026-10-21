@@ -290,3 +290,179 @@ h2 {
   .card-grid { grid-template-columns: 1fr; }
   .invest-grid { grid-template-columns: 1fr; gap: 36px; }
 }
+
+/* Homepage: a flat, ruled layout with the existing DRC palette. */
+.home {
+  --line: #45454f;
+  --text: #f4f3ef;
+  --text-soft: #c6c6d0;
+  --muted: #a5a5b2;
+}
+
+.home .layout {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  width: calc(100% - 48px);
+  max-width: 1600px;
+  min-height: calc(100svh - 48px);
+  margin: 24px auto;
+  border: 1px solid var(--line);
+}
+
+.home .sidebar {
+  position: static;
+  width: auto;
+  padding: 32px 28px;
+  background: transparent;
+}
+
+.home .brand { gap: 0; }
+.home .brand-mark { font-size: 1.3rem; }
+.home .brand-sub { margin-top: 8px; }
+.home .side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 40px -28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.home .side-nav .nav-label,
+.home .side-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: 18px 28px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--text-soft);
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.home .side-nav a:hover {
+  background: var(--panel);
+  color: var(--teal);
+}
+
+.home .content {
+  min-width: 0;
+  margin-left: 0;
+  padding: 0;
+  background: none;
+}
+
+.home .hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  justify-content: normal;
+  min-height: max(580px, calc(100svh - 50px));
+  max-width: none;
+}
+
+.home .hero-copy {
+  align-self: center;
+  padding: 64px clamp(32px, 5vw, 88px) 80px;
+}
+
+.home h1 {
+  max-width: 21ch;
+  font-size: clamp(2.25rem, 4.1vw, 4.3rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.home .lede {
+  max-width: 42ch;
+  margin-top: 28px;
+  font-size: 1.12rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.home .hero-actions {
+  justify-content: flex-end;
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.home .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  min-width: 264px;
+  min-height: 76px;
+  padding: 22px 28px;
+  border: 0;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--teal);
+  font-size: 0.93rem;
+  font-weight: 500;
+  transition: background .15s ease, color .15s ease;
+}
+
+.home .button:hover {
+  transform: none;
+  background: var(--teal);
+  color: var(--bg-deep);
+}
+
+.home a:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: -5px;
+}
+
+.home .block { max-width: none; padding: 64px clamp(32px, 5vw, 88px); }
+.home .card { border-radius: 0; background: transparent; }
+.home .card:hover { transform: none; }
+
+@media (max-width: 860px) {
+  .home .layout {
+    grid-template-columns: minmax(0, 1fr);
+    width: calc(100% - 32px);
+    min-height: calc(100svh - 32px);
+    margin: 16px auto;
+  }
+  .home .sidebar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 24px 24px 0;
+  }
+  .home .side-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 24px -24px 0;
+  }
+  .home .side-nav .nav-label,
+  .home .side-nav a { padding: 16px 24px; min-height: 54px; }
+  .home .side-nav > :nth-child(odd) { border-right: 1px solid var(--line); }
+  .home .side-nav > :nth-last-child(-n+2) { border-bottom: 0; }
+  .home .brand { flex-direction: column; align-items: flex-start; }
+  .home .brand-sub { font-size: 0.7rem; }
+  .home .hero { min-height: max(520px, calc(100svh - 135px)); }
+  .home .hero-copy { padding: 56px 32px 64px; }
+  .home h1 { font-size: clamp(2.1rem, 6vw, 3.4rem); }
+  .home .button { min-width: 50%; }
+}
+
+@media (max-width: 480px) {
+  .home .hero-copy { padding: 44px 24px 52px; }
+  .home .lede { font-size: 1rem; margin-top: 24px; }
+  .home .button { width: 100%; min-height: 68px; border-left: 0; padding: 20px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home { scroll-behavior: auto; }
+  .home .button { transition: none; }
+}

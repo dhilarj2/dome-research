@@ -12,22 +12,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=MuseoModerno:wght@500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body class="home">
     <div class="layout">
       <!-- Left sidebar -->
       <aside class="sidebar">
         <a class="brand" href="#top">
-          <img class="brand-logo" src="assets/logos/drc-light.png" alt="DRC">
           <span class="brand-mark">Dome Research</span>
           <span class="brand-sub">Capital</span>
         </a>
 
         <nav class="side-nav" aria-label="Main navigation">
-          <!-- hidden for now
-          <a href="#investments">Investments</a>
-          <a href="#funds">Funds</a>
-          <a href="#about">About Me</a>
-          -->
+          <span class="nav-label">Investments</span>
+          <span class="nav-label">Incubations</span>
+          <span class="nav-label">Research</span>
+          <a href="https://www.linkedin.com/in/arjun-dhillon-b4ba3a5a/" target="_blank" rel="noopener noreferrer">
+            <span>Team</span>
+            <span aria-hidden="true">↗</span>
+          </a>
         </nav>
 
       </aside>
@@ -35,14 +36,18 @@
       <!-- Main content -->
       <main class="content" id="top">
         <section class="hero">
-          <p class="eyebrow">Investments · Incubations · Research</p>
-          <h1>Investments and incubations<br>across technology and macro shifts.</h1>
-          <p class="lede">
-            Dome Research Capital studies markets, allocates capital, and structures
-            financing around novel risk.
-          </p>
+          <div class="hero-copy">
+            <h1>Investments and incubations across technology and macro shifts.</h1>
+            <p class="lede">
+              Dome Research Capital studies markets, allocates capital, and structures
+              financing around novel risk.
+            </p>
+          </div>
           <div class="hero-actions">
-            <a class="button primary" href="mailto:hello@domeresearch.xyz">Get in touch</a>
+            <a class="button primary" href="mailto:arjun@domeresearch.xyz">
+              <span>Get in touch</span>
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </section>
 

@@ -448,6 +448,8 @@ h2 {
   .home .side-nav a { padding: 16px 24px; min-height: 54px; }
   .home .side-nav > :nth-child(odd) { border-right: 1px solid var(--line); }
   .home .side-nav > :nth-last-child(-n+2) { border-bottom: 0; }
+  .home .side-nav > :last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
+  .home .side-nav > :nth-last-child(2):nth-child(even) { border-bottom: 1px solid var(--line); }
   .home .brand { flex-direction: column; align-items: flex-start; }
   .home .brand-sub { font-size: 0.7rem; }
   .home .hero { min-height: max(520px, calc(100svh - 135px)); }

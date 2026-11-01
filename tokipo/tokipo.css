@@ -1,0 +1,122 @@
+/* Tokipo — extends the flat, ruled homepage layout (body.home) */
+
+.tokipo .tk-wordmark {
+  font-family: var(--font-brand);
+  font-weight: 700;
+  font-size: clamp(3.2rem, 8vw, 6.4rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  max-width: none;
+  background: linear-gradient(100deg, var(--teal) 10%, var(--violet-soft) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tokipo .tk-tagline {
+  margin-top: 14px;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* Sections */
+.tk-section { border-top: 1px solid var(--line); }
+.tk-head { padding: 64px clamp(32px, 5vw, 88px) 44px; }
+.tk-head .block-lede { max-width: 62ch; font-weight: 400; color: var(--text-soft); }
+
+/* Ruled grids: 1px gaps over a line-coloured background */
+.tk-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+.tk-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tk-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tk-grid.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.tk-cell {
+  background: var(--bg);
+  padding: 32px clamp(24px, 3vw, 44px) 36px;
+  transition: background .15s ease;
+}
+.tk-cell:hover { background: var(--panel); }
+.tk-cell h3 {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 1.08rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.tk-cell p { font-size: 0.97rem; color: var(--text-soft); max-width: 46ch; }
+
+.tk-cell.featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(110deg, rgba(45,212,191,0.10), rgba(139,92,246,0.10)), var(--bg);
+}
+.tk-cell.featured h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); color: var(--teal); }
+
+/* Steps */
+.tk-step {
+  display: block;
+  margin-bottom: 22px;
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: var(--violet-soft);
+}
+
+/* Stats */
+.tk-stats .tk-cell { display: flex; flex-direction: column; gap: 8px; }
+.tk-num {
+  font-family: var(--font-brand);
+  font-weight: 600;
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  line-height: 1.1;
+  color: var(--teal);
+}
+.tk-label { font-size: 0.86rem; color: var(--muted); }
+
+.tk-note {
+  padding: 28px clamp(32px, 5vw, 88px);
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.tk-close .tk-head { padding-bottom: 64px; }
+
+.tk-foot {
+  border-top: 1px solid var(--line);
+  padding: 28px clamp(32px, 5vw, 88px);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Sidebar: keep nav visible while scrolling on desktop */
+@media (min-width: 861px) {
+  .tokipo .sidebar { position: sticky; top: 0; align-self: start; height: auto; }
+}
+
+@media (max-width: 1100px) {
+  .tk-grid.cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 860px) {
+  .tk-grid.cols-2, .tk-grid.cols-3 { grid-template-columns: minmax(0, 1fr); }
+  .tk-steps.cols-4 { grid-template-columns: minmax(0, 1fr); }
+  .tk-head { padding: 48px 32px 32px; }
+  .tk-note, .tk-foot { padding-left: 32px; padding-right: 32px; }
+}
+
+@media (max-width: 480px) {
+  .tk-head { padding: 40px 24px 28px; }
+  .tk-cell { padding: 26px 24px 30px; }
+  .tk-note, .tk-foot { padding-left: 24px; padding-right: 24px; }
+}
